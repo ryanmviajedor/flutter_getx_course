@@ -1,30 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_course/controller/home_controller.dart';
-import 'package:flutter_getx_course/view/screens/first_screen.dart';
 import 'package:get/get.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('First Screen'),
         centerTitle: true,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.to(FirstScreen());
-            },
-            child: const Text(
-              'NEXT',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
