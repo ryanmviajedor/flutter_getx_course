@@ -2,19 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx_course/controller/home_controller.dart';
 import 'package:get/get.dart';
 
-class FirstScreen extends StatelessWidget {
-  FirstScreen({super.key});
+class SecondScreen extends StatelessWidget {
+  SecondScreen({super.key});
 
-  final controller = Get.put(
-    HomeController(),
-    permanent: true,
-  );
+  final HomeController homeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Screen'),
+        title: const Text('Second Screen'),
         centerTitle: true,
       ),
       body: Column(
@@ -29,20 +26,6 @@ class FirstScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               );
             },
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: MaterialButton(
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
-              ),
-              color: Colors.red,
-              onPressed: () {
-                controller.displayName();
-              },
-              child: const Text("Display Name"),
-            ),
           ),
         ],
       ),
